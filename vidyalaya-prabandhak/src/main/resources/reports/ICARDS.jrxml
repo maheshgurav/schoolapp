@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_icard_gopinath" pageWidth="500" pageHeight="330" orientation="Landscape" columnWidth="460" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="5" uuid="0173c260-c9ed-4401-b51a-a53191a7348b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<subDataset name="dataset1" uuid="a2b729b7-8a0d-4d4d-baea-dc6854418fac"/>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="classAndDivision" class="java.lang.String"/>
+	<field name="rollNumber" class="java.lang.String"/>
+	<field name="bloodGroup" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="generalRegisterNumber" class="java.lang.String"/>
+	<field name="dateOfBirth" class="java.lang.String"/>
+	<field name="iCardForYear" class="java.lang.String"/>
+	<detail>
+		<band height="303" splitType="Stretch">
+			<elementGroup>
+				<rectangle>
+					<reportElement x="10" y="0" width="450" height="303" uuid="b594dc36-b5da-4f52-b0e3-944fadffb6c8"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="15" y="110" width="121" height="145" uuid="ace4c0cd-12e5-4c7f-b126-99043adf3ef4"/>
+				</rectangle>
+				<textField>
+					<reportElement x="144" y="107" width="296" height="20" uuid="f4785c7d-9049-4789-9c96-c2512d17a295"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Bitter" size="14" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="217" y="153" width="223" height="20" uuid="f4785c7d-9049-4789-9c96-c2512d17a295"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Bitter" size="13" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{classAndDivision} + " (" + $F{iCardForYear} + ")"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="144" y="153" width="73" height="20" uuid="03136b5c-83f8-4990-b581-cae691e1d63d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Noticia_Text" size="13" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[STANDARD]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement mode="Transparent" x="217" y="173" width="223" height="20" isPrintWhenDetailOverflows="true" uuid="f4785c7d-9049-4789-9c96-c2512d17a295"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Bitter" size="13" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{dateOfBirth}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="144" y="173" width="73" height="20" uuid="03136b5c-83f8-4990-b581-cae691e1d63d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Noticia_Text" size="13" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[DOB]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="217" y="193" width="223" height="20" uuid="f4785c7d-9049-4789-9c96-c2512d17a295"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Bitter" size="13" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{bloodGroup}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="144" y="193" width="73" height="20" uuid="03136b5c-83f8-4990-b581-cae691e1d63d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Noticia_Text" size="13" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[BLOOD GP.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="144" y="133" width="73" height="20" uuid="03136b5c-83f8-4990-b581-cae691e1d63d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Noticia_Text" size="13" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[GR. NO.]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="217" y="133" width="223" height="20" uuid="f4785c7d-9049-4789-9c96-c2512d17a295"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Bitter" size="13" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{generalRegisterNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="144" y="213" width="73" height="20" uuid="03136b5c-83f8-4990-b581-cae691e1d63d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Noticia_Text" size="13" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[ADDRESS]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="220" y="213" width="230" height="20" isPrintWhenDetailOverflows="true" uuid="f4785c7d-9049-4789-9c96-c2512d17a295"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Bitter" size="13" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+						<paragraph leftIndent="4"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="28" y="279" width="95" height="20" uuid="03136b5c-83f8-4990-b581-cae691e1d63d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Bitter" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Principal]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="345" y="279" width="95" height="20" uuid="03136b5c-83f8-4990-b581-cae691e1d63d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Bitter" size="12" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[Class teacher]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="217" y="213" width="3" height="20" isPrintWhenDetailOverflows="true" uuid="f4785c7d-9049-4789-9c96-c2512d17a295"/>
+					<textElement verticalAlignment="Middle">
+						<font size="13" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="117" y="29" width="333" height="20" isPrintWhenDetailOverflows="true" uuid="04fd31b7-ac96-4e6c-9987-7bed5b0d71c7"/>
+					<textElement markup="none">
+						<font fontName="Ubuntu" size="13" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_name")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="117" y="10" width="333" height="19" isPrintWhenDetailOverflows="true" uuid="93e7c0e2-1961-4aa0-9ed4-0ce08fda60a6"/>
+					<textElement markup="none">
+						<font fontName="Ubuntu"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_organisation")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="117" y="89" width="333" height="20" isPrintWhenDetailOverflows="true" uuid="e73e394d-b8b5-4323-9b17-5c3669bb30fc"/>
+					<textElement markup="none">
+						<font fontName="Ubuntu" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("other_info")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="117" y="49" width="333" height="20" isPrintWhenDetailOverflows="true" uuid="c3b737da-cc49-46c4-be02-87cbacc22122"/>
+					<textElement markup="none">
+						<font fontName="Ubuntu"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_address")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="117" y="69" width="333" height="20" isPrintWhenDetailOverflows="true" uuid="705d53d7-db8a-43c2-bf93-72dd7d1e1e09"/>
+					<textElement markup="none">
+						<font fontName="Ubuntu" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_grant_details")]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="10" y="10" width="107" height="88" uuid="6edce246-0c1e-4e3b-bb9f-5daefb104cad"/>
+				</image>
+			</elementGroup>
+			<line>
+				<reportElement x="10" y="105" width="445" height="1" uuid="29d32d11-328a-4338-89ec-cbf2dd827c91"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

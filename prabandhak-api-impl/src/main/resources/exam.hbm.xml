@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.Exam" table="EXAM">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="name">
+			<column name="NAME" />
+		</property>
+		<property name="examStartDate">
+			<column name="START_DATE" />
+		</property>
+		<property name="examEndDate">
+			<column name="END_DATE" />
+		</property>
+		<property name="standards">
+			<column name="STANDARDS" />
+		</property>
+		<property name="subjectAndMarks">
+			<column name="SUBJECTS_AND_MARKS" length="5000"/>
+		</property>
+		<property name="organizationGuid">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+	</class>
+</hibernate-mapping>

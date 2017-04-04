@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_gopinath_vidyalaya_bonafide" pageWidth="665" pageHeight="850" columnWidth="625" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b7592dc6-7394-4c66-a6fd-12890a628da7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="28"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<field name="caste" class="java.lang.String"/>
+	<field name="birthAddress" class="java.lang.String"/>
+	<field name="dateOfBirthInWords" class="java.lang.String"/>
+	<field name="dateOfBirthInDigits" class="java.lang.String"/>
+	<field name="bonafideIssueDate" class="java.lang.String"/>
+	<field name="registerNumber" class="java.lang.String"/>
+	<field name="classAndDivision" class="java.lang.String"/>
+	<field name="year" class="java.lang.String"/>
+	<field name="studentName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="700" splitType="Stretch">
+			<textField>
+				<reportElement x="381" y="107" width="244" height="20" uuid="41e49111-6c00-4b11-9173-411042c603ad"/>
+				<textElement textAlignment="Right" markup="none">
+					<font fontName="Bitter" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Permanent Registration Number : "  + $F{registerNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="132" width="91" height="20" uuid="8d3a2ecb-98c6-4888-b53f-683623d860af"/>
+				<textElement>
+					<font fontName="Noticia_Text" size="12"/>
+				</textElement>
+				<text><![CDATA[Kumar/Kumari ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="95" y="132" width="530" height="20" uuid="5e3e2480-12e6-4d03-903a-94356962bd20"/>
+				<textElement>
+					<font fontName="Bitter" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement mode="Opaque" x="4" y="152" width="621" height="20" isPrintWhenDetailOverflows="true" uuid="a87ed313-90d8-4e3f-99df-042196041def"/>
+				<textElement markup="none">
+					<font fontName="Noticia_Text" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["is / was a bonafied student of our school. He / She is / was learning in Std. " + $F{classAndDivision} +" Art's / Commerce / Science / Technical in the year " + $F{year} +". His / Her date of birth is " + $F{dateOfBirthInDigits} + " ("+$F{dateOfBirthInWords} +"). His / Her caste is " + $F{caste} + " & birth place is "+$F{birthAddress}+" as per our record.\nTo the best of my knowledge,he / she bears a good moral character."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="8" y="241" width="118" height="20" uuid="fd370dd9-c786-448a-b287-1227a26f96d7"/>
+				<textElement markup="none">
+					<font fontName="Bitter" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date : " + $F{bonafideIssueDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="543" y="241" width="75" height="20" uuid="ff4ad463-c4c9-4de2-8fcb-0549f2b4b016"/>
+				<textElement>
+					<font fontName="Bitter" size="12"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="107" width="624" height="1" uuid="29d32d11-328a-4338-89ec-cbf2dd827c91"/>
+			</line>
+			<line>
+				<reportElement x="1" y="525" width="624" height="1" uuid="29d32d11-328a-4338-89ec-cbf2dd827c91"/>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="544" y="659" width="75" height="20" uuid="ff4ad463-c4c9-4de2-8fcb-0549f2b4b016"/>
+				<textElement>
+					<font fontName="Bitter" size="12"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="95" y="550" width="541" height="20" uuid="5e3e2480-12e6-4d03-903a-94356962bd20"/>
+				<textElement>
+					<font fontName="Bitter" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="8" y="659" width="118" height="20" uuid="fd370dd9-c786-448a-b287-1227a26f96d7"/>
+				<textElement markup="none">
+					<font fontName="Bitter" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date : " + $F{bonafideIssueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="525" width="244" height="20" uuid="41e49111-6c00-4b11-9173-411042c603ad"/>
+				<textElement textAlignment="Right" markup="none">
+					<font fontName="Bitter" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Permanent Registration Number : "  + $F{registerNumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement mode="Opaque" x="4" y="570" width="621" height="20" isPrintWhenDetailOverflows="true" uuid="a87ed313-90d8-4e3f-99df-042196041def"/>
+				<textElement markup="none">
+					<font fontName="Noticia_Text" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["is / was a bonafied student of our school. He / She is / was learning in Std. " + $F{classAndDivision} +" Art's / Commerce / Science / Technical in the year " + $F{year} +". His / Her date of birth is " + $F{dateOfBirthInDigits} + " ("+$F{dateOfBirthInWords} +"). His / Her caste is " + $F{caste} + " & birth place is "+$F{birthAddress}+" as per our record.\nTo the best of my knowledge,he / she bears a good moral character."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="550" width="91" height="20" uuid="8d3a2ecb-98c6-4888-b53f-683623d860af"/>
+				<textElement>
+					<font fontName="Noticia_Text" size="12"/>
+				</textElement>
+				<text><![CDATA[Kumar/Kumari ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="382" width="624" height="1" uuid="29d32d11-328a-4338-89ec-cbf2dd827c91"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="117" y="25" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="c1e308e0-601e-4adc-ab8b-0b55fcff5d9e"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_name")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="6" width="407" height="19" isPrintWhenDetailOverflows="true" uuid="6ead1fa1-f063-4147-87ff-2b7368a1a305"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_organisation")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="85" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="41a4871f-bd8f-47b6-8ffc-e4248c9dd30f"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("other_info")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="45" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="0aaa852d-38db-4d1e-af65-946ecefaa4d9"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_address")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="65" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="3572ac2c-d92d-44f7-b64d-3049cd9ed888"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_grant_details")]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="10" y="6" width="104" height="88" uuid="bafc4e22-e9b1-40fb-a1de-85a7dd4cb2cf"/>
+			</image>
+			<textField>
+				<reportElement x="114" y="439" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="6a7ea898-2c8e-40cf-b7d5-ebc5f1bae888"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_name")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="420" width="407" height="19" isPrintWhenDetailOverflows="true" uuid="9f5a1c51-a69f-4609-a119-7340057d7012"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_organisation")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="499" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="91e1b363-a733-4039-b678-3258ad3a12c9"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("other_info")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="459" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="3ef879bf-887d-4008-87db-24d06f9f736a"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_address")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="479" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="a0e71a0a-6ab8-4c8a-bbba-71a3dd00256f"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_grant_details")]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="7" y="420" width="104" height="88" uuid="5a71fcad-9790-4fe9-aa56-6cb3bc8bcd52"/>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

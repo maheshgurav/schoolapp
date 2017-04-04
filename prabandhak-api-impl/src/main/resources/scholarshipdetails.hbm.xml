@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.ScholarShipDetails"
+		table="SCHOLARSHIP_DETAILS">
+		<id name="studentGuid" type="java.lang.String" column="GUID">
+			<generator class="assigned" />
+		</id>
+		<property name="scholarShipGuid" type="java.lang.String" >
+			<column name="SCHOLARSHIP_GUID" />
+		</property>
+		<property name="formSubmissionDate" type="java.lang.Long" >
+			<column name="FORM_SUBMISSION_DATE" />
+		</property>
+		<property name="senctionedDate" type="java.lang.Long" >
+			<column name="SANCTION_DATE" />
+		</property>
+		<property name="organizationGuid" type="java.lang.String">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+	</class>
+</hibernate-mapping>

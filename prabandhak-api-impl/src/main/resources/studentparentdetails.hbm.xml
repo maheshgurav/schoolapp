@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.StudentParentDetails" table="STUDENT_PARENT_DETAILS">
+		<id name="guid" type="java.lang.String" column="PARENT_GUID">
+			<generator class="uuid" />
+		</id>
+		<component name="nameOfFather" class="com.samarthsoft.prabandhak.entities.Name">
+			<property name="firstName" column="FIRST_NAME_OF_FATHER"/>
+			<property name="middleName" column="MIDDLE_NAME_OF_FATHER"/>
+			<property name="lastName" column="LAST_NAME_OF_FATHER"/>
+		</component>
+		<component name="nameOfMother" class="com.samarthsoft.prabandhak.entities.Name">
+			<property name="firstName" column="FIRST_NAME_OF_MOTHER"/>
+			<property name="middleName" column="MIDDLE_NAME_OF_MOTHER"/>
+			<property name="lastName" column="LAST_NAME_OF_MOTHER"/>
+		</component>
+		<component name="permanentAddress" class="com.samarthsoft.prabandhak.entities.Address">
+			<property name="address" column="PERMANENT_ADDRESS"/>
+			<property name="state" column="PERMANENT_ADDRESS_STATE"/>
+			<property name="pinCodeNumber" column="PERMANENT_ADDRESS_PIN_CODE"/>
+		</component>
+		<property name="phoneNumber" type="java.lang.String">
+			<column name="PHONE_NUMBER" />
+		</property>
+		<property name="occupation" type="java.lang.String">
+			<column name="OCCUPATION" />
+		</property>
+		<property name="yearlyIncome" type="java.lang.Double">
+			<column name="YEARLY_INCOME" />
+		</property>
+		<property name="birthDateOfFather" type="java.lang.Long">
+			<column name="FATHERS_DATE_OF_BIRTH" />
+		</property>
+		<property name="birthDateOfMother" type="java.lang.Long">
+			<column name="MOTHERS_DATE_OF_BIRTH" />
+		</property>
+		<property name="emailId" type="java.lang.String">
+			<column name="EMAILID" />
+		</property>
+		<property name="studentGuid" type="java.lang.String">
+			<column name="STUDENT_GUID" />
+		</property>
+	</class>
+</hibernate-mapping>

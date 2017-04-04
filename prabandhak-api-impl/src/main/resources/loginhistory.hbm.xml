@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.LoginHistory"
+		table="LOGIN_HISTORY">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="userGuid">
+			<column name="USER_GUID" />
+		</property>
+		<property name="lastLogin">
+			<column name="LAST_LOGIN" />
+		</property>
+		<property name="failedLoginAttemptCount">
+			<column name="FAILED_LOGIN_ATTEMPT" />
+		</property>
+		<property name="loginStatus">
+			<column name="LOGIN_STATUS" />
+		</property>
+		<property name="organizationGuid">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+	</class>
+</hibernate-mapping>

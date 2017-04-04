@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_attendance" pageWidth="1280" pageHeight="842" orientation="Landscape" columnWidth="1240" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cc782838-6014-443e-bc98-66eb2855d55f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="COLUMN_COUNT" value="12"/>
+	<subDataset name="dataset1" whenResourceMissingType="Error" uuid="ac5bfcfd-2f5a-4c26-a262-a1ed8e5075ef">
+		<field name="presentOrAbsent" class="java.lang.String"/>
+		<field name="date" class="java.lang.String"/>
+	</subDataset>
+	<field name="studentRollNumber" class="java.lang.String"/>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="attendanceInfo" class="java.util.List"/>
+	<field name="generalRegisterNumber" class="java.lang.String"/>
+	<field name="dateOfBirth" class="java.lang.String"/>
+	<field name="caste" class="java.lang.String"/>
+	<field name="feeDetails" class="java.lang.String"/>
+	<field name="subcaste" class="java.lang.String"/>
+	<field name="numberOfDaysStudentPresentInMonth" class="java.lang.Number"/>
+	<field name="numberOfDaysStudentPresentInYear" class="java.lang.Number"/>
+	<field name="totalNumberDaysStudentPresent" class="java.lang.Number"/>
+	<field name="remark" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="320" y="0" width="64" height="20" uuid="d2a924fc-91f3-413f-bdad-8bace3661ae5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter"/>
+				</textElement>
+				<text><![CDATA[Roll number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="0" width="160" height="20" uuid="89643f57-c222-48d2-8ca7-8041c83e3cc7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter"/>
+				</textElement>
+				<text><![CDATA[Name of student]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="64" height="20" uuid="d2a924fc-91f3-413f-bdad-8bace3661ae5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter"/>
+				</textElement>
+				<text><![CDATA[GR No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="0" width="64" height="20" uuid="d2a924fc-91f3-413f-bdad-8bace3661ae5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter"/>
+				</textElement>
+				<text><![CDATA[Date of birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="128" y="0" width="64" height="20" isPrintWhenDetailOverflows="true" uuid="d2a924fc-91f3-413f-bdad-8bace3661ae5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter"/>
+				</textElement>
+				<text><![CDATA[Caste]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="0" width="64" height="20" uuid="d2a924fc-91f3-413f-bdad-8bace3661ae5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter"/>
+				</textElement>
+				<text><![CDATA[Fee details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="0" width="64" height="20" uuid="d2a924fc-91f3-413f-bdad-8bace3661ae5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter"/>
+				</textElement>
+				<text><![CDATA[SC/ST/NT/OBC]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement stretchType="RelativeToBandHeight" x="544" y="0" width="23" height="20" isPrintWhenDetailOverflows="true" uuid="f2560b2e-6282-4d5b-967c-7a74bbc01a89"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal" ignoreWidth="true">
+					<datasetRun subDataset="dataset1" uuid="70b80289-d572-44e1-acbd-393c7228b5d9">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{attendanceInfo})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="23">
+						<textField>
+							<reportElement x="0" y="0" width="23" height="20" isPrintWhenDetailOverflows="true" uuid="235d4d82-6562-4117-aafc-a289ec997a8e"/>
+							<box>
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement>
+								<font fontName="Bitter"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="320" y="0" width="64" height="21" uuid="c6c1a5d3-5c9b-40d8-af04-31f919640646"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentRollNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="0" width="160" height="21" uuid="8e7ad5b1-d72c-48d3-87df-4bbb308469e7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement stretchType="RelativeToBandHeight" x="544" y="0" width="23" height="21" isPrintWhenDetailOverflows="true" uuid="f2560b2e-6282-4d5b-967c-7a74bbc01a89"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal" ignoreWidth="true">
+					<datasetRun subDataset="dataset1" uuid="70b80289-d572-44e1-acbd-393c7228b5d9">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{attendanceInfo})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="23">
+						<textField>
+							<reportElement x="0" y="0" width="23" height="21" isPrintWhenDetailOverflows="true" uuid="235d4d82-6562-4117-aafc-a289ec997a8e"/>
+							<box>
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement>
+								<font fontName="Noticia_Text"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{presentOrAbsent}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<textField>
+				<reportElement x="0" y="0" width="64" height="21" uuid="19181eae-c662-4f1d-a875-9c0dca8c13f9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{generalRegisterNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="0" width="64" height="21" uuid="b876ef51-a5ce-4102-9141-e9499bc2bc0e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfBirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="128" y="0" width="64" height="21" isPrintWhenDetailOverflows="true" uuid="8a42c2da-ad43-44f5-807b-cd1de9b78420"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{caste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="0" width="64" height="21" uuid="777453ca-7f21-4031-bf83-d95956fe3abd"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{feeDetails}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="0" width="64" height="21" uuid="9e5ad4cf-8a91-41e5-93a8-734f9c046cbc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subcaste}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

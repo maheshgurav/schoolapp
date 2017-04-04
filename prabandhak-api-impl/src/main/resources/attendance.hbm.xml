@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.Attendance"
+		table="ATTENDANCE">
+		<composite-id name="attendanceKey" class="com.samarthsoft.prabandhak.entities.AttendanceKey">
+			<key-property name="absentOn" column="ABSENT_0N"/>
+			<key-property name="studentGuid" column="STUDENT_GUID"/>
+		</composite-id>
+	</class>
+</hibernate-mapping>

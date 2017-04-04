@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.LoginInformation" table="LOGIN_INFORMATION">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="userName">
+			<column name="NAME" />
+		</property>
+		<property name="password">
+			<column name="PASSWORD" />
+		</property>
+		<property name="userRole">
+			<column name="ROLE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.samarthsoft.prabandhak.enums.UserRole</param>
+				<param name="type">12</param>
+       			<param name="useNamed">false</param>
+			</type>
+		</property> 
+		 <property name="schoolGuid">
+			<column name="SCHOOL_GUID" />
+		</property> 
+	</class>
+</hibernate-mapping>

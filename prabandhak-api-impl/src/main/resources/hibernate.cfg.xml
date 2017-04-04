@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+                                         
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.release_mode">auto</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">10</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<property name="hibernate.jdbc.batch_size">20</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<mapping resource="logininformation.hbm.xml"></mapping>
+		<mapping resource="admission.hbm.xml"></mapping>
+		<mapping resource="applicationsettings.hbm.xml"></mapping>
+		<mapping resource="alumni.hbm.xml"></mapping>
+		<mapping resource="student.hbm.xml"></mapping>
+		<mapping resource="attendance.hbm.xml"></mapping>
+		<mapping resource="caste.hbm.xml"></mapping>
+		<mapping resource="category.hbm.xml"></mapping>
+		<mapping resource="certificate.hbm.xml"></mapping>
+		<mapping resource="classinfo.hbm.xml"></mapping>
+		<mapping resource="classordivisionchangehistory.hbm.xml"></mapping>
+		<mapping resource="deadstock.hbm.xml"></mapping>
+		<mapping resource="district.hbm.xml"></mapping>
+		<mapping resource="exam.hbm.xml"></mapping>
+		<mapping resource="incomedetails.hbm.xml"></mapping>
+		<!--<mapping resource="incomeexpensereason.hbm.xml"></mapping>
+		<mapping resource="instituteinformation.hbm.xml"></mapping> -->
+		<mapping resource="expensedetails.hbm.xml"></mapping>
+		<mapping resource="extracurricularactivitiydetails.hbm.xml"></mapping>
+		<mapping resource="event.hbm.xml"></mapping>
+		<mapping resource="issuedcertificatedetails.hbm.xml"></mapping>
+		<mapping resource="loginhistory.hbm.xml"></mapping>
+		<mapping resource="organization.hbm.xml"></mapping>
+		<mapping resource="removedstudenthistory.hbm.xml"></mapping>
+		<mapping resource="report.hbm.xml"></mapping>
+		<mapping resource="scholarshipdetails.hbm.xml"></mapping>
+		<mapping resource="scholarshiptype.hbm.xml"></mapping>
+		<mapping resource="schooltype.hbm.xml"></mapping>
+		<mapping resource="state.hbm.xml"></mapping>
+		<mapping resource="subject.hbm.xml"></mapping>
+		<mapping resource="supportstaff.hbm.xml"></mapping>
+		<mapping resource="teacher.hbm.xml"></mapping>
+		<mapping resource="tehsil.hbm.xml"></mapping>
+		<mapping resource="userrights.hbm.xml"></mapping>
+		<mapping resource="teacherdesignations.hbm.xml"></mapping>
+		<mapping resource="supportingstaffdesignations.hbm.xml"></mapping>
+		<mapping resource="nationality.hbm.xml"></mapping>
+		<mapping resource="subjectforexam.hbm.xml"></mapping>
+		<mapping resource="examresult.hbm.xml"></mapping>
+		<mapping resource="leavingcertificate.hbm.xml"></mapping>
+		<mapping resource="studentcontactdetails.hbm.xml"></mapping>
+		<mapping resource="studentsubjectdetails.hbm.xml"></mapping>
+		<mapping resource="studentparentdetails.hbm.xml"></mapping>
+	</session-factory>
+</hibernate-configuration>

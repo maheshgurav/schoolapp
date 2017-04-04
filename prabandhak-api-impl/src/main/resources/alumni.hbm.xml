@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.Alumni" table="ALUMNIS">
+		<id name="guid" type="java.lang.String" column="STUDENT_ID">
+			<generator class="assigned" />
+		</id>
+		<property name="PRN" type="java.lang.String">
+			<column name="PRN" />
+		</property>
+		<property name="rollNumber" type="java.lang.String">
+			<column name="ROLL_NUMBER" />
+		</property>		
+		<component name="name" class="com.samarthsoft.prabandhak.entities.Name">
+			<property name="firstName" column="FIRST_NAME"/>
+			<property name="middleName" column="MIDDLE_NAME"/>
+			<property name="lastName" column="LAST_NAME"/>
+		</component>
+		<property name="firstNameOfMother" type="java.lang.String">
+			<column name="NAME_OF_MOTHER" />
+		</property>
+		<property name="caste" type="java.lang.String">
+			<column name="CASTE" />
+		</property>
+		<property name="category" type="java.lang.String">
+			<column name="CATEGORY" />
+		</property>		
+		<property name="scholarshipName" type="java.lang.String">
+			<column name="SCHOLARSHIP_TYPE" />
+		</property>
+		<property name="dateOfBirth" type="java.lang.Long">
+			<column name="DATE_OF_BIRTH" />
+		</property>
+		<component name="placeOfBirth" class="com.samarthsoft.prabandhak.entities.Address">
+			<property name="address" column="BIRTH_PLACE"/>
+			<property name="state" column="BIRTH_PLACE_STATE"/>
+			<property name="pinCodeNumber" column="BIRTH_PLACE_PIN_CODE"/>
+		</component>
+		<property name="standard" type="java.lang.String">
+			<column name="STANDARD" />
+		</property>
+		<property name="division" type="java.lang.String">
+			<column name="DIVISION" />
+		</property>
+		<property name="addmissionTakenInclass" type="java.lang.String">
+			<column name="ADMISSION_TAKEN_IN_CLASS" />
+		</property>				
+		<property name="gender">
+			<column name="GENDER" length="1" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.samarthsoft.prabandhak.enums.Gender</param>
+				<param name="type">12</param>
+				<param name="useNamed">false</param>
+			</type>
+		</property>
+		<property name="nameOfLastAttendedSchool" type="java.lang.String">
+			<column name="LAST_ATTENDED_SCHOOL" />
+		</property>
+		<property name="nationality" type="java.lang.String">
+			<column name="NATIONALITY" />
+		</property>
+		<property name="bloodGroup" type="java.lang.String">
+			<column name="BLOOD_GROUP" />
+		</property>
+		<property name="dateOfAdmission" type="java.lang.Long">
+			<column name="DATE_OF_ADMISSION" />
+		</property>
+		<property name="isAlumni" type="java.lang.Boolean">
+			<column name="IS_ALUMNI" />
+		</property>
+		<property name="motherTongue" type="java.lang.String">
+			<column name="MOTHERTONGUE" />
+		</property>
+		<property name="schoolGuid" type="java.lang.String">
+			<column name="SCHOOL_GUID" />
+		</property>
+		<property name="parentGuid" type="java.lang.String">
+			<column name="PARENT_GUID" />
+		</property>
+	</class>
+</hibernate-mapping>

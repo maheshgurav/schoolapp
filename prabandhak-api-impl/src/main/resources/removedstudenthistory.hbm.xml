@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.RemovedStudentHistory"
+		table="REMOVED_STUDENT_HISTORY">
+		<id name="studentGuid" type="java.lang.String" column="GUID">
+			<generator class="assigned" />
+		</id>
+		<property name="dateOfRemoving">
+			<column name="DATE_OF_REMOVING" />
+		</property>
+		<property name="reasonOfRemovingFromCatalog">
+			<column name="REASON_OF_REMOVING" />
+		</property>
+	</class>
+</hibernate-mapping>

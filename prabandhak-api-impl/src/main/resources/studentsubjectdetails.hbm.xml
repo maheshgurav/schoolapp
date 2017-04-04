@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.StudentSubjectDetails" table="STUDENT_SUBJECTS">
+		<id name="studentId" type="java.lang.String" column="STUDENT_ID">
+			<generator class="assigned" />
+		</id>
+		<property name="standard" type="java.lang.String">
+			<column name="STANDARD" />
+		</property>
+		<property name="division" type="java.lang.String">
+			<column name="DIVISION" />
+		</property>
+		<property name="subjects" type="java.lang.String">
+			<column name="SUBJECTS" />
+		</property>
+	</class>
+</hibernate-mapping>

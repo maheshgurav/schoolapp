@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>Students</title>
+
+<style>
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+  font-size:small;
+}
+	</style>
+
+</head>
+<body bgcolor="#faf7f1">
+
+<img src="data:image/jpg;base64,${generatedImageText}" alt="imagename"/>
+<table border=1 cellspacing="0" cellpadding="5" >
+<tr bgcolor="red">
+    <th class="label">Sr.No.</th>
+    <th class="label">Name Of Student</th>
+    <th class="label">Birth Date</th>
+    <th class="label">Caste</th>
+    <th class="label">Scholarship Name</th>
+</tr>
+#foreach ($student in $students)
+    <tr>
+	    <td>$student.recordNumber</td>
+	    <td>$student.studentName</td>
+	    <td>$student.studentBirthDate</td>
+	    <td>$student.casteAndSubcaste</td>
+	    <td>$student.scholarshipName</td>
+    </tr>
+    #end
+    </table>
+</body>
+</html>

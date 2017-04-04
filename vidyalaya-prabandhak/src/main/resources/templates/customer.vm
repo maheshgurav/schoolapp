@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><title>Customer Search Results - $customer.customerNumber</title>
+
+<style>
+h1 {
+  color:#ccc;
+}
+table tr td{
+    text-align:center;
+    border:1px solid gray;
+    padding:4px;
+}
+table tr th{
+    background-color:#84C7FD;
+    color:#fff;
+    width: 100px;
+}
+.itext{
+    color:#84C7FD;
+    font-weight:bold;
+}
+.description{
+    color:gray;
+}
+	</style>
+
+</head>
+<body bgcolor="#faf7f1">
+
+<img src="data:image/jpg;base64,${generatedImageText}" alt="imagename"/>
+<table border=1 cellspacing="0" cellpadding="5" >
+<tr bgcolor="red">
+    <th class="label">Name</th>
+    <th class="label">Address</th>
+    <th class="label">City</th>
+    <th class="label">State</th>
+    <th class="label">Zip</th>
+    <th class="label">Phone</th>
+</tr>
+#foreach ($customer in $customers)
+    <tr>
+    <td>$customer.name</td>
+    <td>$customer.address</td>
+    <td>$customer.city</td>
+    <td>$customer.state</td>
+    <td>$customer.zip</td>
+    <td>$customer.phone</td>
+    </tr>
+    #end
+    </table>
+</body>
+</html>

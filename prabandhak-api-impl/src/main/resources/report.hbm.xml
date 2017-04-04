@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.Report" table="REPORT">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="reportName">
+			<column name="REPORT_NAME" />
+		</property>
+		<property name="actualReport">
+			<column name="ACTUAL_REPORT" />
+		</property>
+		<property name="organizationGuid">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+	</class>
+</hibernate-mapping>

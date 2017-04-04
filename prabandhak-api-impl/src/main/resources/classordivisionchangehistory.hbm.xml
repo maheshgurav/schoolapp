@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.ClassOrDivisionChangeHistory"
+		table="CLASS_OR_DIVISION_CHAGE_HISTORY">
+		<id name="id" type="java.lang.String" column="ID">
+			<generator class="uuid" />
+		</id>
+		<property name="studentId">
+			<column name="STUDENT_GUID" />
+		</property>
+		<property name="previousStandard">
+			<column name="PREVIOUS_STANDARD" />
+		</property>
+		<property name="previousDivision">
+			<column name="PREVIOUS_DIVISION" />
+		</property>
+		<property name="newStandard">
+			<column name="NEW_STANDARD" />
+		</property>
+		<property name="newDivision">
+			<column name="NEW_DIVISION" />
+		</property>
+		<property name="dateOfChange">
+			<column name="DATE_OF_CHANGE" />
+		</property>
+	</class>
+</hibernate-mapping>

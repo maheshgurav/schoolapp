@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.ClassInfo"
+		table="CLASS_INFO">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="standardOrClass">
+			<column name="STANDARD_OR_CLASS" />
+		</property>
+		<property name="division">
+			<column name="DIVISION" />
+		</property>
+		<property name="schoolTypeGuid">
+			<column name="SCHOOL_TYPE_GUID" />
+		</property>
+		<property name="classTeacherGuid">
+			<column name="CLASS_TEACHER_GUID" />
+		</property>
+		<property name="organizationGuid">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+		<property name="schoolGuid">
+			<column name="SCHOOL_GUID" />
+		</property>
+		<property name="subjectsAndTeachers">
+			<column name="SUBJECTS_AND_TEACHERS" length="5000"/>
+		</property>
+	</class>
+</hibernate-mapping>

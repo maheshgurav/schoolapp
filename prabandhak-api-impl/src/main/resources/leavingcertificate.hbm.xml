@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.LeavingCertificate"
+		table="LEAVING_CERTIFICATES">
+		<id name="studentGuid">
+			<column name="STUDENT_GUID" />
+			<generator class="assigned" />
+		</id>
+		<property name="progress">
+			<column name="PROGRESS" />
+		</property>
+		<property name="conduct">
+			<column name="CONDUCT" />
+		</property>
+		<property name="reasonOfLeaving">
+			<column name="REASON_OF_LEAVING" />
+		</property>
+		<property name="remark">
+			<column name="REMARK" />
+		</property>
+		<property name="dateOfLeaving">
+			<column name="DATE_OF_LEAVING" />
+		</property>
+		<property name="studyingSinceMonthAndYear">
+			<column name="STUDYING_SINCE_MONTH_YEAR" />
+		</property>
+	</class>
+</hibernate-mapping>

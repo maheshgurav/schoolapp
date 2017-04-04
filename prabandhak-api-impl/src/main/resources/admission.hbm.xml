@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.Admission"
+		table="ADMISSION">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="dateOfBirth" type="java.lang.Long">
+			<column name="DATE_OF_BIRTH" />
+		</property>
+		<property name="permanentAddress" type="java.lang.String">
+			<column name="PERMANENT_ADDRESS" length="2048" />
+		</property>
+		<property name="currentAddress" type="java.lang.String">
+			<column name="CURRENT_ADDRESS" length="2048" />
+		</property>
+		<property name="gender">
+			<column name="GENDER" length="1" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.samarthsoft.prabandhak.enums.Gender</param>
+				<param name="type">12</param>
+				<param name="useNamed">false</param>
+			</type>
+		</property>
+		<property name="aadharCardNumber" type="java.lang.String">
+			<column name="AADHAR_CARD_NUMBER" />
+		</property>
+		<property name="organizationGuid" type="java.lang.String">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+		<property name="contactNumber" type="java.lang.String">
+			<column name="CONTACT_NUMBER" />
+		</property>
+		<property name="emailId" type="java.lang.String">
+			<column name="EMAIL_ADDRESS" />
+		</property>
+		<property name="fatherName">
+			<column name="FATHER_NAME" />
+		</property>
+		<property name="motherName">
+			<column name="MOTHER_NAME" />
+		</property>
+		<property name="caste">
+			<column name="CASTE" />
+		</property>
+		<property name="category">
+			<column name="CATEGORY" />
+		</property>
+		<property name="placeOfBirth">
+			<column name="PLACE_OF_BIRTH" />
+		</property>
+		<property name="parentsOccupation">
+			<column name="PARENT_OCCUPATION" />
+		</property>
+		<property name="yearlyIncome" type="java.lang.Double">
+			<column name="YEARLY_INCOME" />
+		</property>
+		<property name="scholarshipType">
+			<column name="SCHOLARSHIP_TYPE" />
+		</property>
+		<property name="classForAdmission">
+			<column name="CLASS_FOR_ADMISSION" />
+		</property>
+		<property name="marksOrGradeOfLastClass">
+			<column name="MARKS_OR_GRADE_LASTCLASS" />
+		</property>
+		<property name="lastAttendedSchoolName">
+			<column name="LAST_SCHOOL_ATTENDED_NAME" />
+		</property>
+		<property name="lastAttendedUniversity">
+			<column name="LAST_ATTENDED_UNIVERSITY" />
+		</property>
+	</class>
+</hibernate-mapping>

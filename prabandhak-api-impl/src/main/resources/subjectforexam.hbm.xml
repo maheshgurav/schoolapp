@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.SubjectsForExam" table="EXAM_SUBJECTS">
+		<id name="subjectGuid" type="java.lang.String" column="SUBJECT_GUID">
+			<generator class="assigned" />
+		</id>
+		<property name="examGuid">
+			<column name="EXAM_GUID" />
+		</property>
+		<property name="subjectEvaluationType">
+			<column name="EVALUATION_TYPE" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.samarthsoft.prabandhak.enums.SubjectEvaluationType</param>
+				<param name="type">12</param>
+				<param name="useNamed">false</param>
+			</type>
+		</property>
+		<property name="marksOrGradesRequiredForPassing">
+			<column name="MARKS_OR_GRADES_FOR_PASSING" />
+		</property>
+	</class>
+</hibernate-mapping>

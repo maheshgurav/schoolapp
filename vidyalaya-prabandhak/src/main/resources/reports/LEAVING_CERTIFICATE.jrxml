@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_gopinath_vidyalaya_lc" pageWidth="595" pageHeight="640" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a3b6872-2dc4-4d91-b557-28008bd9b5bc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<field name="dateOfBirth" class="java.lang.String"/>
+	<field name="reasonOfLeaving" class="java.lang.String"/>
+	<field name="dateOfJoining" class="java.lang.String"/>
+	<field name="dateOfLeaving" class="java.lang.String"/>
+	<field name="permenentRegistrationNumber" class="java.lang.String"/>
+	<field name="leavingCertificateIssueDateForReport" class="java.lang.String"/>
+	<field name="remark" class="java.lang.String"/>
+	<field name="standard" class="java.lang.String"/>
+	<field name="caste" class="java.lang.String"/>
+	<field name="birthAddress" class="java.lang.String"/>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="fathersName" class="java.lang.String"/>
+	<field name="mothersName" class="java.lang.String"/>
+	<field name="motherTongue" class="java.lang.String"/>
+	<field name="nameOfPreviousSchoolAttended" class="java.lang.String"/>
+	<field name="progress" class="java.lang.String"/>
+	<field name="conduct" class="java.lang.String"/>
+	<field name="dateOfBirthInWord" class="java.lang.String"/>
+	<field name="isDuplicateCertificate" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="170" splitType="Stretch">
+			<textField>
+				<reportElement x="376" y="148" width="178" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="true" isItalic="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["General Register Number : " + $F{permenentRegistrationNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="479" y="0" width="75" height="19" isPrintWhenDetailOverflows="true" uuid="aeb417ba-dd98-4b29-b04b-5972fa3faaa0">
+					<printWhenExpression><![CDATA[$F{isDuplicateCertificate}.equals("1")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Noticia_Text" size="14" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[(Duplicate)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="113" y="58" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="8ce9864c-6146-4ea8-a70c-101c76c605d0"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_address")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="78" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="402c895a-f71b-4a09-9ad4-7f080298c903"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_grant_details")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="98" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="6715e88e-06c4-4b2c-b6d3-5c5ae51cdddc"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("other_info")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="38" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="0c19d7ba-72ae-45b2-851b-880cfbb580b1"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_name")]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="6" y="19" width="104" height="88" uuid="bc9bc3e7-8823-40d1-8e84-2d0f054fa908"/>
+			</image>
+			<textField>
+				<reportElement x="113" y="19" width="407" height="19" isPrintWhenDetailOverflows="true" uuid="a2bc2df6-b8ce-4dec-b4e2-e8dd29cf3a4e"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_organisation")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="113" y="118" width="355" height="29" isPrintWhenDetailOverflows="true" uuid="4c5ee5be-41c6-4b20-b4aa-8e9eb5283fad"/>
+				<textElement>
+					<font fontName="Ubuntu" size="20" isBold="true" isItalic="false" isUnderline="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[LEAVING CERTIFICATE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="450" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement positionType="Float" mode="Transparent" x="26" y="120" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="f6e30aee-4a85-484a-a458-1abb8601dd79"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Place Of Birth"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="100" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="dbdf42a9-0ce8-4760-bab6-4972ee7380e6"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Nationality]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="147" y="140" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfBirth}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="80" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="fe38a585-4842-4ac9-9d26-963400799d1d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Mother Tongue]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="26" y="140" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="5b4cdf41-8008-40a6-bd06-b03100e292f0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Date Of Birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="220" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="dc43fc46-78c2-49bc-a462-622e3380b765"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Progress]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="147" y="40" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mothersName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="20" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="d8df6a12-aab0-4ddd-99c2-c6522792d022"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Father's Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="147" y="240" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{conduct}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="147" y="180" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nameOfPreviousSchoolAttended}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="147" y="220" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{progress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="147" y="200" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfJoining}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="147" y="160" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfBirthInWord}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="40" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="a18f4268-64e7-4c8e-83c8-1c742b98b5cd"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Mother's Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="100" width="408" height="20" uuid="751691f0-20cd-43df-bc9c-9121046a1138"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[INDIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="240" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="717a5e9d-f7a1-41a4-85c9-8abe4dc8fcbb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Conduct]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="147" y="120" width="408" height="20" isPrintWhenDetailOverflows="true" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{birthAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="0" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="c4565751-1ced-4176-8935-914f2dc09296"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Student's Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="60" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="342e7c2a-42d1-4c30-b992-8ec8c8eb558d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Religion & Caste]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="200" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="d9ac2e20-08a2-45b5-bfee-7a2d30465687"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Date Of Admission]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="180" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="5cbf5b3b-4f68-42a2-bbb7-d9cdef4b97d8"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Previous School Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="147" y="20" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fathersName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="60" width="408" height="20" uuid="a35bcf60-6ce1-4daa-ba87-6d1a78503f37"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{caste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="0" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="160" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="7d59c5d2-fe0e-44a2-80a2-c285f61320c2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Date Of Birth (In Words)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="80" width="408" height="20" uuid="81e0c0a0-de48-4115-9011-131b664d90ab"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[MARATHI]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="147" y="260" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfLeaving}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="260" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="717a5e9d-f7a1-41a4-85c9-8abe4dc8fcbb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Date Of Leaving]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="147" y="280" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{standard}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="280" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="717a5e9d-f7a1-41a4-85c9-8abe4dc8fcbb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Standard]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="147" y="300" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reasonOfLeaving}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="300" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="717a5e9d-f7a1-41a4-85c9-8abe4dc8fcbb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Reason Of Leaving]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="147" y="320" width="408" height="20" uuid="1e67431b-6b6f-40ff-aa59-88a191f62b07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Noticia_Text" size="8" isBold="true" isItalic="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{remark}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="320" width="121" height="20" isPrintWhenDetailOverflows="true" uuid="717a5e9d-f7a1-41a4-85c9-8abe4dc8fcbb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph firstLineIndent="5"/>
+				</textElement>
+				<text><![CDATA[Remark]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="0" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="219a9498-d54a-4f5a-a6d9-cfde9ef326d4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="20" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="b727a35a-9024-4357-afad-bcfdda722a21"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="40" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="036859a7-d7ca-4380-bd83-18b2b966b61c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="60" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="9e3ba8a7-681e-4c99-b386-6e7b40b2f940"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="80" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="6c4b47bf-1aa3-49ba-a807-77dc3517bae5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="100" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="d20bd2cc-3265-4cf2-b28f-b187c294c7d3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="2" y="120" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="7dc1b1db-b2f1-4a14-86c8-3565512b353d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="140" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="d5ab546c-da36-40a3-8947-7c1d6bb2afe8"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 8.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="160" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="98b4ef48-531c-4499-8723-2d43a1e3f633"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 9.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="180" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="8377d021-c523-48e8-86c0-215d762840fc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 10.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="200" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="221b4312-2f32-4dca-af8b-6673321acbaa"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 11.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="220" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="495f8640-affa-4845-aaac-70068f4e1a1c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 12.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="240" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="445ef7b1-9e1c-48ea-b878-e6119eab41b7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 13.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="260" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="9adf7348-b15c-4315-9740-94043d84feb7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 14.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="280" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="0a616253-fe01-4b36-9846-8d81e2bcae7e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 15.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="300" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="8533d3b5-33cf-4feb-921a-43a2205ded9c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 16.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="320" width="24" height="20" isPrintWhenDetailOverflows="true" uuid="ce39d15b-5ec6-4bea-9776-8c6906daf4d9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bitter" size="11" isBold="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[ 17.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="341" width="553" height="20" isPrintWhenDetailOverflows="true" uuid="ee0198aa-671f-4102-85b7-0322b4602b6e"/>
+				<textElement>
+					<font fontName="Bitter" size="11" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Certificate that the above information is accordance with the school General Register]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="1" y="392" width="240" height="20" uuid="e0620179-2df4-40cd-9496-8601d04efbff"/>
+				<textElement markup="none">
+					<font fontName="Bitter" size="11" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Issue date : " + $F{leavingCertificateIssueDateForReport}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="489" y="392" width="56" height="20" uuid="93663642-b5bb-46cc-96d5-29dbd8e2a3f8"/>
+				<textElement>
+					<font fontName="Bitter" size="11" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="416" width="545" height="33" isPrintWhenDetailOverflows="true" uuid="0d1dc086-fed9-4b47-91c8-d41f7199f741"/>
+				<textElement>
+					<font fontName="Noticia_Text" size="11" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[[Note:No change in any entry is to be made except by the authority issuing the leaving certificate and that infringment of the rule will be punished with rustication]]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="0" y="413" width="555" height="1" uuid="18b4f5e9-b04b-4785-8d16-b53787ecb538"/>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="265" y="392" width="56" height="20" uuid="93663642-b5bb-46cc-96d5-29dbd8e2a3f8"/>
+				<textElement>
+					<font fontName="Bitter" size="11" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Clerk]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

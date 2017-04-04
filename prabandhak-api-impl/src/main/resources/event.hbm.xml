@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.Event" table="EVENTS">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="name">
+			<column name="NAME" />
+		</property>
+		<property name="description">
+			<column name="DESCRIPTION" />
+		</property>
+		<property name="date">
+			<column name="DATE" />
+		</property>
+		<property name="typeOfEvent">
+			<column name="EVENT_TYPE" length="1" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.samarthsoft.prabandhak.enums.EventType</param>
+				<param name="type">12</param>
+				<param name="useNamed">false</param>
+			</type>
+		</property>
+	</class>
+</hibernate-mapping>

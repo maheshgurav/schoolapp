@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.SupportStaff"
+		table="SUPPORT_STAFF">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<component name="name" class="com.samarthsoft.prabandhak.entities.Name">
+			<property name="firstName" column="FIRST_NAME"/>
+			<property name="middleName" column="MIDDLE_NAME"/>
+			<property name="lastName" column="LAST_NAME"/>
+		</component>
+		<property name="dateOfBirth" type="java.lang.Long">
+			<column name="DATE_OF_BIRTH" />
+		</property>
+		<property name="permanentAddress" type="java.lang.String">
+			<column name="PERMANENT_ADDRESS" length="2048" />
+		</property>
+		<property name="currentAddress" type="java.lang.String">
+			<column name="CURRENT_ADDRESS" length="2048" />
+		</property>
+		<property name="gender">
+			<column name="GENDER" length="1" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.samarthsoft.prabandhak.enums.Gender</param>
+				<param name="type">12</param>
+				<param name="useNamed">false</param>
+			</type>
+		</property>
+		<property name="aadharCardNumber" type="java.lang.String">
+			<column name="AADHAR_CARD_NUMBER" />
+		</property>
+		<property name="organizationGuid" type="java.lang.String">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+		<property name="contactNumber" type="java.lang.String">
+			<column name="CONTACT_NUMBER" />
+		</property>
+		<property name="emailId" type="java.lang.String">
+			<column name="EMAIL_ADDRESS" />
+		</property>
+		<property name="joiningDate">
+			<column name="JOINING_DATE" />
+		</property>
+		<property name="qualification">
+			<column name="QUALIFICATION" />
+		</property>
+		<property name="designation">
+			<column name="DESIGNATION" />
+		</property>
+		<property name="panCardNumber">
+			<column name="PAN_CARD_NUMBER" />
+		</property>
+		<property name="bankAccountDetails" type="java.lang.String">
+			<column name="BANK_ACCOUNT_DETAILS" />
+		</property>
+	</class>
+</hibernate-mapping>

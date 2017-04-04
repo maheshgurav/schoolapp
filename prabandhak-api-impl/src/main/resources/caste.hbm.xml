@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.Caste" table="CASTE">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="categoryGuid">
+			<column name="CATEGORY_GUID" />
+		</property>
+		<property name="subcaste">
+			<column name="SUBCASTE" />
+		</property>
+		<property name="religion">
+			<column name="RELIGION" />
+		</property>
+		<property name="isMinority">
+			<column name="IS_MINORITY" />
+		</property>
+		<property name="isDefaultForAttendanceReport">
+			<column name="IS_DEFAULT_FOR_ATTENDANCE_REPORT" />
+		</property>
+		</class>
+</hibernate-mapping>

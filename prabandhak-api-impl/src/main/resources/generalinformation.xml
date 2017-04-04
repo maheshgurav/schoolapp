@@ -1,0 +1,35 @@
+<!-- <id name="guid" type="java.lang.String" column="GUID">
+	<generator class="uuid" />
+</id>
+<property name="name" type="java.lang.String">
+	<column name="NAME" />
+</property>
+<property name="dateOfBirth" type="java.lang.Long">
+	<column name="DATE_OF_BIRTH" />
+</property>
+<property name="permanentAddress" type="java.lang.String">
+	<column name="PERMANENT_ADDRESS" length="2048" />
+</property>
+<property name="currentAddress" type="java.lang.String">
+	<column name="CURRENT_ADDRESS" length="2048" />
+</property>
+<property name="gender">
+	<column name="GENDER" length="1" />
+	<type name="org.hibernate.type.EnumType">
+		<param name="enumClass">com.samarthsoft.prabandhak.enums.Gender</param>
+		<param name="type">12</param>
+		<param name="useNamed">false</param>
+	</type>
+</property>
+<property name="aadharCardNumber" type="java.lang.String">
+	<column name="AADHAR_CARD_NUMBER" />
+</property>
+<property name="organizationGuid" type="java.lang.String">
+	<column name="ORGANIZATION_GUID" />
+</property>
+<property name="contactNumber" type="java.lang.String">
+	<column name="CONTACT_NUMBER" />
+</property>
+<property name="emailId" type="java.lang.String">
+	<column name="EMAIL_ADDRESS" />
+</property> -->

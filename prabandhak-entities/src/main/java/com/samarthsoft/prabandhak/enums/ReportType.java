@@ -1,0 +1,31 @@
+package com.samarthsoft.prabandhak.enums;
+
+public enum ReportType {
+	CLASS_WISE_STUDENTS(0, "CLASS_WISE_STUDENTS"), CLASS_WISE_BOYS(1,
+			"CLASS_WISE_BOYS"), CLASS_WISE_GIRLS(2, "CLASS_WISE_GIRLS"), CLASS_WISE_PLUS_CASTE_WISE_STUDENTS(
+			3, "CLASS_WISE_PLUS_CASTE_WISE_STUDENTS"), CLASS_WISE_PLUS_CASTE_WISE_BOYS(
+			4, "CLASS_WISE_PLUS_CASTE_WISE_BOYS"), CLASS_WISE_PLUS_CASTE_WISE_GIRLS(
+			5, "CLASS_WISE_PLUS_CASTE_WISE_GIRLS"), CLASS_WISE_SCHOLARSHIP_WISE_STUDENTS(
+			6, "CLASS_WISE_SCHOLARSHIP_WISE_STUDENTS"), CLASS_WISE_SCHOLARSHIP_WISE_BOYS(
+			7, "CLASS_WISE_SCHOLARSHIP_WISE_BOYS"), CLASS_WISE_SCHOLARSHIP_WISE_GIRLS(
+			8, "CLASS_WISE_SCHOLARSHIP_WISE_GIRLS"), ICARDS(9, "ICARDS"), GR_REPORT(
+			10, "GR_REPORT"), TEACHER_DETAILS_REPORT(11,
+			"TEACHER_DETAILS_REPORT"), CASTEWISE_SUMMARY_REPORT(12,
+			"CASTEWISE_SUMMARY_REPORT"), REPORT_CARD(13,"REPORT_CARD"),STUDENT_BASIC_REPORT(14,"STUDENT_BASIC_REPORT");
+
+	private final String reportTypeName;
+	private final int reportTypeId;
+
+	private ReportType(final int reportTypeId, final String reportTypeName) {
+		this.reportTypeId = reportTypeId;
+		this.reportTypeName = reportTypeName;
+	}
+
+	public String getReportTypeName() {
+		return reportTypeName;
+	}
+
+	public int getReportTypeId() {
+		return reportTypeId;
+	}
+}

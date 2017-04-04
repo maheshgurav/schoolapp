@@ -1,0 +1,38 @@
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		  http://www.springframework.org/schema/beans 
+		  http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+          http://www.springframework.org/schema/security 
+          http://www.springframework.org/schema/security/spring-security-3.2.xsd
+          http://www.springframework.org/schema/util
+          http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<security:http>
+		<security:form-login login-page="/login.htm" default-target-url="/login.htm" />
+		<security:intercept-url pattern="/login.htm" requires-channel="http" />
+		<security:logout logout-url="/j_spring_security_logout"
+			logout-success-url="/login.htm" invalidate-session="true" />
+		<security:access-denied-handler ref="adHandler" />
+	</security:http>
+
+	<bean id="adHandler" class="com.samarthsoft.prabandhak.webapp.security.CustomAccessDeniedHandler">
+	</bean>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="authenticationProvider" />
+	</security:authentication-manager>
+
+	<bean id="authenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService" />
+	</bean>
+
+	<bean id="customAuthenticationProvider" class="com.samarthsoft.prabandhak.webapp.security.CustomAuthenticationProvider">
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+
+	<bean id="userDetailsService" class="com.samarthsoft.prabandhak.webapp.security.UserDetailsAuthenticationService">
+	</bean>
+</beans>

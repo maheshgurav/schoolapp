@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.UserRights"
+		table="USER_RIGHTS">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="assigned" />
+		</id>
+		<property name="rights">
+			<column name="RIGHTS" />
+		</property>
+		<property name="organizationGuid">
+			<column name="ORGANIZATION_GUID" />
+		</property>
+	</class>
+</hibernate-mapping>

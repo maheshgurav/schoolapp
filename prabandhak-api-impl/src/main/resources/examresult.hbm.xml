@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.ExamResult"
+		table="EXAM_RESULT">
+		<composite-id name="examResultKey"
+			class="com.samarthsoft.prabandhak.entities.ExamResultKey">
+			<key-property name="studentGuid" column="STUDENT_GUID" />
+			<key-property name="examGuid" column="EXAM_GUID" />
+			<key-property name="subjectGuid" column="SUBJECT_GUID" />
+			<key-property name="standardAndDivision" column="STANDARD_AND_DIVISION" />
+		</composite-id>
+		<property name="marks">
+			<column name="MARKS" />
+		</property>
+	</class>
+</hibernate-mapping>

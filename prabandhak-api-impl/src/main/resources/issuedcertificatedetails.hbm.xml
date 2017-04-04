@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.IssuedCertificateDetails"
+		table="ISSUED_CERTIFICATE_DETAILS">
+		<id name="studentGuid" type="java.lang.String" column="STUDENT_GUID">
+			<generator class="assigned" />
+		</id>
+		<property name="certificateGuid">
+			<column name="CERTIFICATE_GUID" />
+		</property>
+		<property name="dateOfIssue">
+			<column name="DATE_OF_ISSUE" />
+		</property>
+	</class>
+</hibernate-mapping>

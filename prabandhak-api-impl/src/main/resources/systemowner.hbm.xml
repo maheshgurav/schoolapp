@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.samarthsoft.prabandhak.entities.SystemOwner"
+		table="SYSTEM_OWNER">
+		<id name="guid" type="java.lang.String" column="GUID">
+			<generator class="uuid" />
+		</id>
+		<property name="name">
+			<column name="NAME" />
+		</property>
+		<property name="address">
+			<column name="ADDRESS" />
+		</property>
+		<property name="emailId">
+			<column name="ADDRESS" />
+		</property>
+		<property name="contactNumber">
+			<column name="ADDRESS" />
+		</property>
+	</class>
+</hibernate-mapping>

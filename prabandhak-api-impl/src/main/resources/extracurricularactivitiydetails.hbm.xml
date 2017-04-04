@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class
+		name="com.samarthsoft.prabandhak.entities.ExtraCurricularActivitiyDetails"
+		table="EXTRA_CURR_ACT_DETAILS">
+		<id name="studentGuid" type="java.lang.String" column="STUDENT_GUID">
+			<generator class="assigned" />
+		</id>
+		<property name="activityName">
+			<column name="ACTIVITY_NAME" />
+		</property>
+		<property name="priceDetails">
+			<column name="PRICE_DEATILS" />
+		</property>
+	</class>
+</hibernate-mapping>

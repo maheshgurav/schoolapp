@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.samarthsoft.prabandhak</groupId>
+		<artifactId>prabandhak-build-all</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>prabandhak-services-authenticator</artifactId>
+	<name>Authenticator</name>
+	<description>Authenticator for RMI services</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.samarthsoft.prabandhak</groupId>
+			<artifactId>prabandhak-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.samarthsoft.prabandhak</groupId>
+			<artifactId>prabandhak-entities</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.samarthsoft.prabandhak</groupId>
+			<artifactId>prabandhak-services</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.samarthsoft.prabandhak</groupId>
+			<artifactId>prabandhak-services-server</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.samarthsoft.prabandhak</groupId>
+			<artifactId>prabandhak-common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.iharder</groupId>
+			<artifactId>base64</artifactId>
+			<version>2.3.8</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.6</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_students_classwise" pageWidth="597" pageHeight="842" columnWidth="557" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eeece56d-cb02-42c0-a502-13b6cdbd3b3f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.y" value="0"/>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="rollNumber" class="java.lang.String"/>
+	<field name="mark" class="java.lang.String"/>
+	<field name="passedOrFail" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="109" width="90" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<textElement>
+					<font fontName="Bitter" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Subject Name : "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="109" width="82" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<textElement>
+					<font fontName="Bitter" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Exam Name : "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="109" width="126" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<textElement>
+					<font fontName="Noticia_Text" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("SUBJECT_NAME")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="109" width="158" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<textElement>
+					<font fontName="Noticia_Text" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("EXAM_NAME")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="46" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="b5ac0dac-8cbd-4a5a-81d2-4dfdfd284936"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_address")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="7" width="407" height="19" isPrintWhenDetailOverflows="true" uuid="84b55a6f-f846-4bf9-8872-729eaac2b5f3"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_organisation")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="66" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="2eac687b-7702-4513-83e3-02b1f5c2914a"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_grant_details")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="26" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="9cc0a209-513a-4390-b054-4050e37cd7d4"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("school_name")]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="10" y="7" width="104" height="88" uuid="095eb1ff-4f27-4b22-894f-7b744530a375"/>
+			</image>
+			<textField>
+				<reportElement x="117" y="86" width="407" height="20" isPrintWhenDetailOverflows="true" uuid="c7ffd33c-b3df-4d93-8c3b-1ebe6db871c6"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("other_info")]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="61" y="0" width="279" height="26" uuid="225fedd4-f415-4ecb-9e68-4cc1c1d0bc0c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Student name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="108" height="26" uuid="8d928b2d-4dfa-4361-a30b-560207f1da60"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Marks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="0" width="108" height="26" uuid="5770b6ad-fab8-40d3-bd58-ea51527b139a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Pass/Fail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="26" uuid="8ad19658-5ad0-4620-b47f-33d064486c4a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Bitter" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[Sr.No.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="61" y="0" width="279" height="20" uuid="6dcb4df3-6bf6-4419-a69c-30cbccc92a39"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="108" height="20" uuid="23784491-3bbf-484d-8b45-a896a328c5fe"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="108" height="20" uuid="013f277b-724b-4bb6-8ea0-acc971215359"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passedOrFail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="61" height="20" uuid="6dcb4df3-6bf6-4419-a69c-30cbccc92a39"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rollNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="110">
+			<staticText>
+				<reportElement x="0" y="2" width="160" height="20" uuid="8d4960be-f421-4e3e-974e-85e60b5e5127"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font fontName="Bitter" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Total students attended exam :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="2" width="213" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("TOTAL_STUDENTS_ATTENDED_EXAM")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="22" width="160" height="20" uuid="a01362ed-f623-450f-aea3-b35a95852bf5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font fontName="Bitter" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Total students passed :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="22" width="213" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("TOTAL_STUDENTS_PASSED_IN_EXAM")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="42" width="160" height="20" uuid="cc6617f8-dba8-407f-93bf-e564fb3b39bf"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font fontName="Bitter" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Total students failed :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="42" width="213" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("TOTAL_STUDENTS_FAILED_IN_EXAM")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="62" width="160" height="20" uuid="cc6617f8-dba8-407f-93bf-e564fb3b39bf"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement markup="none">
+					<font fontName="Bitter" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Passing % :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="62" width="213" height="20" uuid="35d15c53-b9cb-4232-a29d-c32c82e5f058"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="Noticia_Text" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}.get("PASSING_PERCENTAGE")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="481" y="90" width="75" height="20" uuid="cc6617f8-dba8-407f-93bf-e564fb3b39bf"/>
+				<textElement textAlignment="Right" markup="none">
+					<font fontName="Bitter" isBold="true" pdfFontName="Times-Roman" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
