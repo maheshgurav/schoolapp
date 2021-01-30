@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 public class HibernateUtil {
 	private static final Logger LOG = LoggerFactory.getLogger(HibernateUtil.class);
 	private static SessionFactory sessionFactory = null;
+	private static ServiceRegistry serviceRegistry;
 
 	private HibernateUtil() {
 		// Utility class
@@ -19,27 +20,21 @@ public class HibernateUtil {
 		LOG.debug("loading Hibernate Configuration...");
 		try {
 			// TODO : Call load configuration code via static block
-			
-			 ConfigurationLoader.loadConfiguration("school_on_web.properties");
-			 Configuration configuration = new Configuration();
-			 configuration.setProperty("hibernate.connection.url","jdbc:mysql://" + System.getProperty("database.host") + ":" +
-			 System.getProperty("database.port") + "/" +
-			 System.getProperty("database.name"));
-			 configuration.setProperty("hibernate.connection.username",
-			 System.getProperty("database.login"));
-			 configuration.setProperty("hibernate.connection.password",
-			 System.getProperty("database.password"));
-			 configuration.configure();
-			 
+			ConfigurationLoader.loadConfiguration("school_on_web.properties");
+
+			Configuration configuration = new Configuration();
+			configuration.setProperty("hibernate.connection.url", "jdbc:mysql://" + System.getProperty("database.host")
+					+ ":" + System.getProperty("database.port") + "/" + System.getProperty("database.name"));
+			configuration.setProperty("hibernate.connection.username", System.getProperty("database.login"));
+			configuration.setProperty("hibernate.connection.password", System.getProperty("database.password"));
+			configuration.configure();
+
+			ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(
+			configuration.getProperties()). buildServiceRegistry();
+			sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		} catch (Exception ex) {
 			LOG.error("", ex);
 		}
 		return sessionFactory;
 	}
-
-	/*
-	 * public static SessionFactory getSessionFactory() {
-	 * if(sessionFactory==null) sessionFactory = getSessionFactory1(); return
-	 * sessionFactory; }
-	 */
 }
