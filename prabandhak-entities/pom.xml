@@ -6,6 +6,10 @@
 		<artifactId>prabandhak-build-all</artifactId>
 		<version>1.0.0</version>
 	</parent>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 	<artifactId>prabandhak-entities</artifactId>
 	<name>Entities</name>
 	<description>This project will contain all the entities</description>

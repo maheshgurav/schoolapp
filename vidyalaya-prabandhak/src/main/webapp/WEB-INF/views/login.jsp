@@ -31,7 +31,7 @@
 				<span class="clearfix"></span>
                 </form:form>
             </div>
-            <a href="http://www.deltabee.com" class="text-center new-account">Deltabee Technologies Pvt.Ltd.</a>
+            <a href="" class="text-center new-account">Mahesh Mohan Gurav</a>
         </div>
     </div>
 </div>
