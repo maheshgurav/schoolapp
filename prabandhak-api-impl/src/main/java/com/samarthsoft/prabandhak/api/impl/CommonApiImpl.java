@@ -51,10 +51,10 @@ public class CommonApiImpl extends ApiBaseImpl implements CommonApi{
 		try {
 			session = sessionFactory.openSession();
 			transaction = session.beginTransaction();
-			session.saveOrUpdate(parentObject);
+			session.persist(parentObject);
 			if(loginInformation!=null){
 				injectGuidInLoginInformationObject(parentObject, loginInformation);
-				session.saveOrUpdate(loginInformation);
+				session.persist(loginInformation);
 			}
 			transaction.commit();
 			result = true;

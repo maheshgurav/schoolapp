@@ -75,7 +75,7 @@ public class GenericApiImpl extends ApiBaseImpl implements GenericApi {
 		try {
 			session = sessionFactory.openSession();
 			transaction = session.beginTransaction();
-			session.saveOrUpdate(updateField,record);
+			session.persist(updateField,record);
 			transaction.commit();
 			result = true;
 		} catch (Exception ex) {
@@ -117,7 +117,7 @@ public class GenericApiImpl extends ApiBaseImpl implements GenericApi {
 			session.save(record);
 			break;
 		case INSERTORUPDATE:
-			session.saveOrUpdate(record);
+			session.persist(record);
 			break;
 		case UPDATE:
 			session.update(record);
@@ -276,7 +276,7 @@ public class GenericApiImpl extends ApiBaseImpl implements GenericApi {
 		Transaction tx = session.beginTransaction();
 		int count = 1;
 		   for (Object object : records) {
-			session.saveOrUpdate(object);
+			session.persist(object);
 		    if (count % 20 == 0) { 
 		        session.flush();
 		        session.clear();
