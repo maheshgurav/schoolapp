@@ -29,7 +29,7 @@ public class AttendanceApiImpl extends ApiBaseImpl implements AttendanceApi {
 				session.delete(attendance);
 			}
 			for(Attendance attendance : recordsToInsert){
-				session.saveOrUpdate(attendance);
+				session.persist(attendance);
 			}
 			transaction.commit();
 			result = true;

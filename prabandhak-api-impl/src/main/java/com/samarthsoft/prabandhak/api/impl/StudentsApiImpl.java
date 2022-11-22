@@ -34,7 +34,7 @@ public class StudentsApiImpl  extends ApiBaseImpl implements StudentsApi {
 		Transaction tx = session.beginTransaction();
 		int count = 1;
 		for (Object object : alumnis) {
-			session.saveOrUpdate("studentGuid",object);
+			session.persist("studentGuid",object);
 			if (count % 20 == 0) { 
 				session.flush();
 				session.clear();
@@ -47,7 +47,7 @@ public class StudentsApiImpl  extends ApiBaseImpl implements StudentsApi {
 	    }
 
 		for (Object object : students) {
-			session.saveOrUpdate("guid",object);
+			session.persist("guid",object);
 			if (count % 20 == 0) { 
 				session.flush();
 				session.clear();
