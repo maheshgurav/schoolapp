@@ -1,9 +1,9 @@
 package com.samarthsoft.prabandhak.connector;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,8 +29,8 @@ public class HibernateUtil {
 			configuration.setProperty("hibernate.connection.password", System.getProperty("database.password"));
 			configuration.configure();
 
-			ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(
-			configuration.getProperties()). buildServiceRegistry();
+			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
+					   configuration.getProperties()). build();
 			sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		} catch (Exception ex) {
 			LOG.error("", ex);
