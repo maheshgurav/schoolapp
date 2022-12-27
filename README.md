@@ -1,3 +1,7 @@
+# Important
+
+I am moving this code in a spring boot application. If you are interested and want to contribute in frontend using react and backend in spring boot, kindly start watching the repository - https://github.com/maheshgurav/schoolapp-elite
+
 # schoolapp
 
 This project is basically a Java Spring/Hibernate application.
